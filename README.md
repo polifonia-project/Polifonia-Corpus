@@ -40,19 +40,6 @@ The data of the module can be downloaded from:
 | IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/IT.tar.gz?csf=1&web=1&e=K6j6ve)**        | - |
 | NL   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/NL.tar.gz?csf=1&web=1&e=SwP1gK)**        | - |
 
-### Annotations
-
-The annotation of the module can be downloaded from:
-
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
-
 
 ### Statistics
 
@@ -94,19 +81,6 @@ The data of the module can be downloaded from:
 | IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/IT/txt.tar.gz?csf=1&web=1&e=CL2QIQ)** | - |
 | NL   | http://        | - |
 
-### Annotations
-
-The annotation of the module can be downloaded from:
-
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
-
 
 ### Statistics
 
@@ -138,19 +112,6 @@ The metadata of the module can be downloaded from:
 ### Data
 
 The data of the module can be downloaded from:
-
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
-
-### Annotations
-
-The annotation of the module can be downloaded from:
 
 | lang | url     | - |
 |------|---------|---|
@@ -208,17 +169,6 @@ The data of the module can be downloaded from:
 | MUSICBO | http:// | - |
 | ORGANS  | http:// | - |
 
-### Annotations
-
-The annotation of the module can be downloaded from:
-
-| Pilot   | url     | -   |
-|---------|---------|-----|
-| BELLS   | http:// | - |
-| CHILD   | http:// | - |
-| MEETUPS | http:// | - |
-| MUSICBO | http:// | - |
-| ORGANS  | http:// | - |
 
 
 ### Statistics
