@@ -190,10 +190,11 @@ The metadata of the module can be downloaded from:
 | Pilot   | url     | -   |
 |---------|---------|-----|
 | BELLS   | http:// | - |
-| CHILD   | http:// | - |
+| CHILD   | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/Pilots%20Corpora/CHILD/metadata_CHILD.xlsx?d=w74bba036bbf2466fb7e2512abcf8a436&csf=1&web=1&e=IRKX9p)** |
 | MEETUPS | http:// | - |
-| MUSICBO | http:// | - |
+| MUSICBO | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/Pilots%20Corpora/MusicBo/Metadata_MusicBO.xlsx?d=w182957d7cee6459c98e6554d89a6166a&csf=1&web=1&e=BqgKBO)** |
 | ORGANS  | http:// | - |
+
 
 ### Data
 
