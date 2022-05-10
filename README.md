@@ -17,28 +17,28 @@ It was created selecting from **[BabelNet domains](http://lcl.uniroma1.it/babeld
 ### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | url                                                                                                                                                                                                                                | url           |
-|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| DE   | **[.tsv](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE.xlsx?d=w2517edd7efc44c3dae7ad38650fc1c8e&csf=1&web=1&e=FaOeXW)** | **[.xlsx]()** |
-| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataEN.tsv?csf=1&web=1&e=pRPo7t)**                                      | **[.xlsx]()** |
-| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataES.tsv?csf=1&web=1&e=AdGzJk)**                                      | **[.xlsx]()** |
-| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataFR.tsv?csf=1&web=1&e=woKOHY)**                                      | **[.xlsx]()** |
-| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataIT.tsv?csf=1&web=1&e=9QWy3S)**                                      | **[.xlsx]()** |
-| NL   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataNL.tsv?csf=1&web=1&e=28zhsf)**                                      | **[.xlsx]()** |
-| All | **[.tsv]()**                                                                                                                                                                                                                       | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**||
+| lang | url                                                                                                                                                                                                                                | url           | done?   |   
+|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------|
+| DE   | **[.tsv](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE.xlsx?d=w2517edd7efc44c3dae7ad38650fc1c8e&csf=1&web=1&e=FaOeXW)** | **[.xlsx]()** | &#9745; |
+| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataEN.tsv?csf=1&web=1&e=pRPo7t)**                                      | **[.xlsx]()** | &#9745; |
+| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataES.tsv?csf=1&web=1&e=AdGzJk)**                                      | **[.xlsx]()** | &#9745; |
+| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataFR.tsv?csf=1&web=1&e=woKOHY)**                                      | **[.xlsx]()** | &#9745; |
+| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataIT.tsv?csf=1&web=1&e=9QWy3S)**                                      | **[.xlsx]()** | &#9745; |
+| NL   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataNL.tsv?csf=1&web=1&e=28zhsf)**                                      | **[.xlsx]()** | &#9745; |
+| All | **[.tsv]()**                                                                                                                                                                                                                       | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**| &#9745; |
 
 ### Data
 
 The data of the module can be downloaded from:
 
-| lang | url            | - |
-|------|----------------|---|
-| DE   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/DE.tar.gz?csf=1&web=1&e=UdFhO5)** | - |
-| EN   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/EN.tar.gz?csf=1&web=1&e=cPKFfg)**       | - |
-| ES   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/ES.tar.gz?csf=1&web=1&e=BeklUc)**       | - |
-| FR   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/FR.tar.gz?csf=1&web=1&e=7sGRRs)**        | - |
-| IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/IT.tar.gz?csf=1&web=1&e=K6j6ve)**        | - |
-| NL   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/NL.tar.gz?csf=1&web=1&e=SwP1gK)**        | - |
+| lang | url            | done? |
+|------|----------------|-------|
+| DE   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/DE.tar.gz?csf=1&web=1&e=UdFhO5)** | &#9745;  |
+| EN   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/EN.tar.gz?csf=1&web=1&e=cPKFfg)**       | &#9745; |
+| ES   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/ES.tar.gz?csf=1&web=1&e=BeklUc)**       | &#9745; |
+| FR   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/FR.tar.gz?csf=1&web=1&e=7sGRRs)**        | &#9745; |
+| IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/IT.tar.gz?csf=1&web=1&e=K6j6ve)**        | &#9745; |
+| NL   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/NL.tar.gz?csf=1&web=1&e=SwP1gK)**        | &#9745; |
 
 
 ### Statistics
@@ -60,17 +60,17 @@ It was created using the **[Polifonia Textual Corpus Population](https://github.
 ### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | url          | -             |
-|------|--------------|---------------|
-| DE   | **[.tsv]()** | **[.xlsx]()** |
-| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataEN.tsv?csf=1&web=1&e=ZMwthB)** | **[.xlsx]()** |
-| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** | **[.xlsx]()** |
-| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** | **[.xlsx]()** |
-| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataIT.tsv?csf=1&web=1&e=THUvPH)** | **[.xlsx]()** |
-| NL   | **[.tsv]()** | **[.xlsx]()** |
+| lang | .tsv                                                                                                                                                                                  | .xlsx         | &#9745; | 
+|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------| ------- |
+| DE   | **[.tsv]()**                                                                                                                                                                          | **[.xlsx]()** | &#9745; |
+| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataEN.tsv?csf=1&web=1&e=ZMwthB)** | **[.xlsx]()** | &#9745; |
+| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** | **[.xlsx]()** | &#9745; |
+| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** | **[.xlsx]()** | &#9745; |
+| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataIT.tsv?csf=1&web=1&e=THUvPH)** | **[.xlsx]()** | &#9745; |
+| NL   | **[.tsv]()**                                                                                                                                                                          | **[.xlsx]()** | &#9745; |
 ### Data
 
-The data of the module can be downloaded from:
+The data of the module can not be downloaded due to copyright issue. However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
 
 | lang | url            | - |
 |------|----------------|---|
@@ -109,9 +109,10 @@ The metadata of the module can be downloaded from:
 | FR   | http:// | - |
 | IT   | http:// | - |
 | NL   | http:// | - |
+
 ### Data
 
-The data of the module can be downloaded from:
+The data of this module can not be downloaded due to copyright issues. However, it is possible to reconstruct the corpus using the metadata provided in previous section.
 
 | lang | url     | - |
 |------|---------|---|
@@ -159,7 +160,7 @@ The metadata of the module can be downloaded from:
 
 ### Data
 
-The data of the module can be downloaded from:
+The data of some pilot can not be downloaded due to copyright issues. The available data can be foung below:
 
 | Pilot   | url     | - |
 |---------|---------|---|
