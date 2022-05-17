@@ -46,7 +46,7 @@ In this way the word 'swing' will be searched trought the corpus and some senten
 
 #### Example
 
-## Concept search
+## Con  cept search
 
 #### API
 
