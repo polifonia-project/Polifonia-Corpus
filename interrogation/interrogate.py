@@ -1,12 +1,12 @@
 import argparse
 import csv
-import pickle
 from tqdm import tqdm
 from nltk.corpus import wordnet as wn
 import os
 import requests
 from db_utils import *
 import pandas as pd
+import gdown
 
 def annotation2dict(annotation):
     annotation_ = [a.split('\t') for a in annotation]
@@ -119,7 +119,7 @@ def select_sents_with_concept(conn, query, sent_n, corpus, save_to_file):
 
 
 def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_n, save_to_file):
-    db_path = os.path.join(annotations_path, 'Annotations_' + corpus.capitalize() + '-' + lang.upper() + '.db')
+    db_path = os.path.join(annotations_path, corpus.capitalize() + '_' + lang.upper() + '.db')
     conn = create_connection(db_path)
     if interrogation_type == 'keyword':
         Results = select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file)
@@ -137,17 +137,18 @@ def download_annotations(annotations_path):
                 continue
             name, lang, url = line.split(',')
             if os.path.exists(os.path.join(annotations_path, '_'.join([name, lang]) + '.db')) == False:
-                response = requests.get(url, stream=True)
-                total_size_in_bytes = int(response.headers.get('content-lenght', 0))
-                block_size = 1024
-                progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
-                with open(os.path.join(annotations_path, '_'.join([name, lang]) + '.db'), 'wb') as f:
-                    for data in response.iter_content(block_size):
-                        progress_bar.update(len(data))
-                        f.write(data)
-                progress_bar.close()
-                if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
-                    print('ERROR: something went wrong!')
+                gdown.download(url, os.path.join(annotations_path, '_'.join([name, lang]) + '.db'), quiet=False)
+                # response = requests.get(url, stream=True)
+                # total_size_in_bytes = int(response.headers.get('content-lenght', 0))
+                # block_size = 1024
+                # progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
+                # with open(os.path.join(annotations_path, '_'.join([name, lang]) + '.db'), 'wb') as f:
+                #     for data in response.iter_content(block_size):
+                #         progress_bar.update(len(data))
+                #         f.write(data)
+                # progress_bar.close()
+                # if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
+                #     print('ERROR: something went wrong!')
 
 def parse_args():
     parser = argparse.ArgumentParser()
