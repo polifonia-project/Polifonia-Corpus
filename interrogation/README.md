@@ -4,6 +4,7 @@ The interrogation of the corpus takes advantage of the annotation described in t
 
 The main script to use to interrogate the corpus is:
 
+
 > interrogate.py
 
 It has different parameters that can be used to select, navigate and store sentences of the corpus that satisfy aspecific query.
@@ -21,22 +22,25 @@ The parameters are explained below their use is described in the following secti
 # How to use this repository
 
 The first step is to clone the repository
-
+```
 > git clone https://github.com/polifonia-project/Polifonia-Corpus.git
 > cd Polifonia-Corpus
+```
 
 The second step involves the download of the required packages
-
+```
 > pip install -r requirements.txt
+```
 
 Once the environment is set up, it is possible to test the script using the default parameters with:
 
+```
 > python interrogation/interrogate.py
-
+```
 To change the default keyword, the --query parameter has to be passed to the script:
-
+```
 > python interrogation/interrogation.py --query swing
-
+```
 In this way the word 'swing' will be searched trought the corpus and some sentences will be displayed.
 
 
