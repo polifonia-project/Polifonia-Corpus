@@ -13,7 +13,7 @@ def annotation2dict(annotation):
     annotation_dict = {}
     i=0
     for annotation in annotation_:
-        if len(annotation) == 7 or len(annotation) == 10:
+        if len(annotation) == 7:
             token_id = 'token_'+str(i)
             annotation_dict.setdefault(token_id, dict())
             annotation_dict[token_id]['form'] = annotation[1]
@@ -22,7 +22,19 @@ def annotation2dict(annotation):
             annotation_dict[token_id]['offset'] = annotation[4]
             annotation_dict[token_id]['ent_type'] = annotation[5]
             annotation_dict[token_id]['ent_iob'] = annotation[6]
-            i+=1
+        if len(annotation) == 10:
+            token_id = 'token_' + str(i)
+            annotation_dict.setdefault(token_id, dict())
+            annotation_dict[token_id]['form'] = annotation[1]
+            annotation_dict[token_id]['lemma'] = annotation[2]
+            annotation_dict[token_id]['pos'] = annotation[3]
+            annotation_dict[token_id]['offset'] = annotation[4]
+            annotation_dict[token_id]['ent_type'] = annotation[5]
+            annotation_dict[token_id]['ent_iob'] = annotation[6]
+            annotation_dict[token_id]['entity_mention'] = annotation[7]
+            annotation_dict[token_id]['entity_link'] = annotation[8]
+            annotation_dict[token_id]['is_musical'] = annotation[9]
+        i+=1
     return annotation_dict
 
 
@@ -34,6 +46,26 @@ def print_sents_concepts(results, query):
         res = [result[0], result[1], result[2].split('\n')[2]]
         annotation = annotation2dict(result[3].split('\n'))
         key_concept = [(k, t) for k, t in annotation.items() if t['offset'] == query]
+        try:
+            annotation_ = list(annotation.values())
+            #idx = int(key_concept[0][0].split('_')[1])
+            idx = [i for i, (k, v) in enumerate(annotation.items()) if k == key_concept[0][0]][0]
+            print(res[0].ljust(30), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx-8,idx)]).rjust(60), annotation_[idx]['form'].center(10), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx+1,idx+9)]).ljust(60))
+            Results.append(res)
+        except:
+            continue
+    return Results
+
+def print_sents_entities(results, query):
+    #cols = [column[0] for column in results.description]
+    #results = pd.DataFrame.from_records(data=results.fetchall(), columns=cols)
+    Results = []
+    for result in results:
+        res = [result[0], result[1], result[2].split('\n')[2]]
+        annotation = annotation2dict(result[3].split('\n'))
+        if len(list(annotation.values())[0]) == 6:
+            continue
+        key_concept = [(k, t) for k, t in annotation.items() if query.lower() in t['entity_link'].lower()]
         try:
             annotation_ = list(annotation.values())
             idx = int(key_concept[0][0].split('_')[1])
@@ -78,15 +110,16 @@ def select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file):
         results = c.execute(
             """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_text, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
             (' ' + query + ' ', sent_n, offset))
-
         Results+=print_sents(results, query)
-        more = input('Press "enter" for more sentences? (type "no" and press "enter" to stop)')
+        more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
         offset+=sent_n
     return Results
 
 
 def get_concept(query, concepts):
-    if len(concepts) > 1:
+    if len(concepts) == 0:
+        print('Your query does not have concepts connected with it. Please try with another one or use the "keyword" search.')
+    elif len(concepts) > 1:
         print('The word {} is associated with {} concepts'.format(query, len(concepts)))
         print('Please select one concept from the list below indicating its number:')
         for i, concept in enumerate(concepts):
@@ -99,7 +132,7 @@ def get_concept(query, concepts):
     offset = str(concept.offset())
     while len(offset) < 8:
         offset = '0' + offset
-    return 'wn:' + offset + concepts[0].pos(), concept
+    return 'wn:' + offset + concept.pos(), concept
 
 def select_sents_with_concept(conn, query, sent_n, corpus, save_to_file):
     concepts = wn.synsets(query)
@@ -117,6 +150,26 @@ def select_sents_with_concept(conn, query, sent_n, corpus, save_to_file):
         offset+=sent_n
     return Results
 
+def select_sents_with_entity(conn, query, sent_n, corpus, save_to_file):
+
+    # TO BE IMPLMEMENTED:
+    # use the Polifonia KB to retrieve all the entities related to a query
+    #entities = get_entities(query)
+    #bn_key, entity = get_entity(query, entities)
+
+    c = conn.cursor()
+    offset = 0
+    more = ''
+    Results = []
+    while more != 'no':
+        results = c.execute(
+        """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
+        (query, sent_n, offset))
+        Results+=print_sents_entities(results, query)
+        more = input('Press "enter" for more sentences? (type "no" and press "enter" to stop)')
+        offset+=sent_n
+    return Results
+
 
 def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_n, save_to_file):
     db_path = os.path.join(annotations_path, corpus.capitalize() + '_' + lang.upper() + '.db')
@@ -127,6 +180,8 @@ def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_
         Results = select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file)
     elif interrogation_type == 'concept':
         Results = select_sents_with_concept(conn, query, sent_n, corpus, save_to_file)
+    elif interrogation_type == 'entity':
+        Results = select_sents_with_entity(conn, query, sent_n, corpus, save_to_file)
     if save_to_file == 'Yes':
         save_results(Results, query, 'keyword', corpus)
         print('{} sentences stored'.format(len(Results)))
