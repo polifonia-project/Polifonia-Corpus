@@ -120,6 +120,8 @@ def select_sents_with_concept(conn, query, sent_n, corpus, save_to_file):
 
 def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_n, save_to_file):
     db_path = os.path.join(annotations_path, corpus.capitalize() + '_' + lang.upper() + '.db')
+    if os.path.exists(db_path) == False:
+        download_annotations(annotations_path, corpus.capitalize() + '_' + lang.upper())
     conn = create_connection(db_path)
     if interrogation_type == 'keyword':
         Results = select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file)
@@ -130,14 +132,16 @@ def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_
         print('{} sentences stored'.format(len(Results)))
 
 
-def download_annotations(annotations_path):
+def download_annotations(annotations_path, db_name):
+    db_names = dict()
     with open(os.path.join(annotations_path, 'urls.csv')) as f:
         for i, line in enumerate(f.readlines()):
             if i == 0:
                 continue
             name, lang, url = line.split(',')
-            if os.path.exists(os.path.join(annotations_path, '_'.join([name, lang]) + '.db')) == False:
-                gdown.download(url, os.path.join(annotations_path, '_'.join([name, lang]) + '.db'), quiet=False)
+            db_names['_'.join([name, lang])] = url
+
+    gdown.download(db_names[db_name], os.path.join(annotations_path, db_name + '.db'), quiet=False)
                 # response = requests.get(url, stream=True)
                 # total_size_in_bytes = int(response.headers.get('content-lenght', 0))
                 # block_size = 1024
@@ -153,7 +157,6 @@ def download_annotations(annotations_path):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--annotations_path', type=str, default='../annotations/db/')
-    parser.add_argument('--download_annotations', type=str, default='No')
     parser.add_argument('--corpus', type=str, default='Wikipedia',
                         help="It can be Wikipedia, Books, Periodicals or Pilots")
     parser.add_argument('--lang', type=str, default='EN', help="It can be DE, EN, ES, FR, IT or NL")
@@ -166,6 +169,4 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
-    if args.download_annotations == 'Yes':
-        download_annotations(args.annotations_path)
     interrogate(args.annotations_path, args.corpus, args.lang, args.interrogation_type, args.query, args.sent_n, args.save_to_file)
