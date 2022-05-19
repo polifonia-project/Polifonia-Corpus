@@ -68,7 +68,7 @@ All the sentences that have been shown will be saved to a file (--save_to_file Y
 > python interrogate.py --annotations_path ../annotations/db --corpus Wikipedia --lang EN --interrogation_type keyword  --query swing --sent_n 100 --save_to_file Yes
 ```
 
-![keyword search results](.figs/keyword_search.png)
+![keyword search results](figs/keyword_search.png)
 
 The results of the query are presented sentence by sentence. In each line of the results there is the document id of the sentence and the keyword in context.
 If the results are saved the entire sentences are saved and not just the snippets of the keyword context.
@@ -90,7 +90,7 @@ To select a concept, a lemma is provided through the "--query" parameter and the
 The following prompt will retrieve from the Wikipedia corpus (--corpus Wikipedia) sentences in English (--lang EN) that contain a concept that has "swing" as its lemma.
 To select the concept the system will provide a list of concepts as shown below.
 
-![concept selection](.figs/concept_selection.png)
+![concept selection](figs/concept_selection.png)
 
 Entering "4", the system will show to the user up to 100 sentences (--sent_n 100) annotated with the corresponding sense at time and ask the user if he wants to repeat the search to retrieve other sentences.
 All the sentences that have been shown will be saved to a file (--save_to_file Yes) in the "out" folder of the repository.
@@ -99,7 +99,7 @@ All the sentences that have been shown will be saved to a file (--save_to_file Y
 > python interrogate.py --annotations_path ../annotations/db --corpus Wikipedia --lang EN --interrogation_type concept  --query swing --sent_n 100 --save_to_file Yes
 ```
 
-![concept search results](.figs/concept_search.png)
+![concept search results](figs/concept_search.png)
 
 The results of the query are presented sentence by sentence. In each line of the results there is the document id of the sentence and the keyword in context.
 If the results are saved the entire sentences are saved and not just the snippets of the keyword context.
@@ -118,14 +118,16 @@ To select an entity, a word is provided through the "--query" parameter and the 
 ```
 
 ### Example
-The following prompt will retrieve from the Wikipedia corpus (--corpus Wikipedia) sentences in English (--lang EN) that contain a mention to a named entity "wagner" as its lemma.
+The following prompt will retrieve from the Wikipedia corpus (--corpus Wikipedia) sentences in English (--lang EN) that contain a mention to a named entity "bach" as its lemma.
 To select the specific named entity the system will provide a list of named entities as shown below.
 
-![entity selection](.figs/entity_selection.png)
+![entity selection](figs/entity_selection.png)
 
-Entering "4", the system will show to the user up to 100 sentences (--sent_n 100) annotated with the corresponding named entity at time and ask the user if he wants to repeat the search to retrieve other sentences.
+Entering "0", the system will show to the user up to 100 sentences (--sent_n 100) annotated with the corresponding named entity at time and ask the user if he wants to repeat the search to retrieve other sentences.
 All the sentences that have been shown will be saved to a file (--save_to_file Yes) in the "out" folder of the repository.
 
 ```
-> python interrogate.py --annotations_path ../annotations/db --corpus Wikipedia --lang EN --interrogation_type entity --query wagner --sent_n 100 --save_to_file Yes
+> python interrogate.py --annotations_path ../annotations/db --corpus Wikipedia --lang EN --interrogation_type entity --query bach --sent_n 100 --save_to_file Yes
 ```
+
+![entity selection](figs/entity_search.png)
