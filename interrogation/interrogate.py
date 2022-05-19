@@ -3,10 +3,11 @@ import csv
 from tqdm import tqdm
 from nltk.corpus import wordnet as wn
 import os
-import requests
 from db_utils import *
 import pandas as pd
 import gdown
+import pickle
+import sys
 
 def annotation2dict(annotation):
     annotation_ = [a.split('\t') for a in annotation]
@@ -146,16 +147,41 @@ def select_sents_with_concept(conn, query, sent_n, corpus, save_to_file):
         """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
         (wn_key, sent_n, offset))
         Results+=print_sents_concepts(results, wn_key)
-        more = input('Press "enter" for more sentences? (type "no" and press "enter" to stop)')
+        more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
         offset+=sent_n
     return Results
 
-def select_sents_with_entity(conn, query, sent_n, corpus, save_to_file):
+def get_entities(query, lang):
+    with open('data/lex_ent_map.pkl', 'rb') as f:
+        ent_map = pickle.load(f)
+    return ent_map[lang.upper()].get(query, [])
+
+def get_entity(query, entities, lang):
+    if len(entities) == 0:
+        print(
+            'Your query does not have entities connected with it. Please try with another one or use the "keyword" search.')
+        sys.exit()
+    with open('data/pages.pkl', 'rb') as f:
+        pages = pickle.load(f)
+    if len(entities) > 1:
+        print('The word {} is associated with {} entity'.format(query, len(entities)))
+        print('Please select one entity from the list below indicating its number:')
+        for i, concept in enumerate(entities):
+            print('{}. {} - {}'.format(i, concept, pages[lang.upper()][concept.replace(' ', '_')]))
+        index = input()
+        concept = entities[int(index)]
+    else:
+        concept = entities[0]
+    print('The research is based on the concept defined as:\n{}:\t{}'.format(query, pages[lang.upper()][concept.replace(' ', '_')]))
+    return concept
+
+
+def select_sents_with_entity(conn, query, sent_n, corpus, lang, save_to_file):
 
     # TO BE IMPLMEMENTED:
     # use the Polifonia KB to retrieve all the entities related to a query
-    #entities = get_entities(query)
-    #bn_key, entity = get_entity(query, entities)
+    entities = get_entities(query, lang)
+    wkp_title = get_entity(query, entities, lang)
 
     c = conn.cursor()
     offset = 0
@@ -164,9 +190,9 @@ def select_sents_with_entity(conn, query, sent_n, corpus, save_to_file):
     while more != 'no':
         results = c.execute(
         """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
-        (query, sent_n, offset))
-        Results+=print_sents_entities(results, query)
-        more = input('Press "enter" for more sentences? (type "no" and press "enter" to stop)')
+        (wkp_title, sent_n, offset))
+        Results+=print_sents_entities(results, wkp_title)
+        more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
         offset+=sent_n
     return Results
 
@@ -181,7 +207,7 @@ def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_
     elif interrogation_type == 'concept':
         Results = select_sents_with_concept(conn, query, sent_n, corpus, save_to_file)
     elif interrogation_type == 'entity':
-        Results = select_sents_with_entity(conn, query, sent_n, corpus, save_to_file)
+        Results = select_sents_with_entity(conn, query, sent_n, corpus, lang, save_to_file)
     if save_to_file == 'Yes':
         save_results(Results, query, 'keyword', corpus)
         print('{} sentences stored'.format(len(Results)))
@@ -215,9 +241,9 @@ def parse_args():
     parser.add_argument('--corpus', type=str, default='Wikipedia',
                         help="It can be Wikipedia, Books, Periodicals or Pilots")
     parser.add_argument('--lang', type=str, default='EN', help="It can be DE, EN, ES, FR, IT or NL")
-    parser.add_argument('--interrogation_type', type=str, default='concept',
+    parser.add_argument('--interrogation_type', type=str, default='entity',
                         help="It can be Keyword, concept or entity")
-    parser.add_argument('--query', type=str, default='swing')
+    parser.add_argument('--query', type=str, default='wagner')
     parser.add_argument('--sent_n', type=int, default=50)
     parser.add_argument('--save_to_file', type=str, default='No')
     return parser.parse_args()
