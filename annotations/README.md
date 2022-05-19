@@ -72,7 +72,7 @@ Afther the metadata there is the sentence annotation:
 | token_4	  | (	                         | (	| PUNCT	| 	             | 	| O		| 	0                  | 0                     |
 | token_5	  | born	                      | bear	| VERB	| wn:02518161v	 | 	| O		| 	0                  | 0                     |
 | token_6	  | August	                    | August	| PROPN	| 	             | DATE	| B	| August 1967         | 0                     | 		0|
-| token_7	  | 1967	 | 1967	 | NUM		 | DATE  | 	 | I	 | 		0   |     |     |     |     |     |     |     |
+| token_7	  | 1967	 | 1967	 | NUM		 |   | DATE	 | I	 | 		0   |     |     |     |     |     |     |     |
 | token_8	  | )	                         | )	| PUNCT	| 	             | 	| O	| 		0                 | 0                     |
 | token_9	  | ,	                         | ,	| PUNCT	| 	             | 	| O	| 		0                 | 0                     |
 | token_10	 | known                      | 	know	| VERB	| wn:01426397v	 | 	| O	| 		0                 | 0                     |
