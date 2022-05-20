@@ -1,7 +1,49 @@
 
 # Polifonia Textual Corpus
 
+> :warning: **Only the English part of the annotations can be downloaded at this stage**
+
 This repository contains the script to access, parse, annotate and interrogate the data and metadata of the Polifonia Textual Corpus.
+
+The high level structure of the repository is the following:
+
+```
+Polifonia-Corpus
+│   README.md
+│   wikipedia_corpus_parser.py
+|   wikipedia_corpus_reader.py    
+│
+└───annotations
+│   │   README.md
+│   │
+│   └───db
+│       │   Wikipedia_EN.db
+│       │   Periodicals_EN.db
+│       │   Books_EN.db
+|       |   ........
+|       |   "Module"_"Lang".db
+│   
+└───interrogation
+|   │   README.md
+|   │   interrogate.py
+|   |
+|   |___data
+|       |   lex_ent_map.pkl
+|       |   pages.pkl
+|
+|___utils
+    |   db_utils.py
+```
+
+The root folder contains the script to access and parse the Polifonia Corpus data and metadata that are linked in this README.md file.
+
+The annotations folder contains a README.md file in which it is explained how the corpus was annotated. A "db" subfolder of the "annotations" folder is set up to store the databases with the annotations of the corpus that will be used for the interrogations of the corpus. The databases will be downloaded automatically the first time each module will be queried. The links for the download are listed in the "urls.csv" file.
+
+The interrogation folder contains a README.md file that explain how to interrogate the corpus. It contains a "data" subfolder used to link mentions, named entities and Wikipedia page titles.
+
+## The corpus
+
+> :warning: **Only the English part of the annotations are ready at this stage**
 
 The corpus is dived into four modules:
 - the Wikipedia module
@@ -11,37 +53,37 @@ The corpus is dived into four modules:
 
 Each module (except the Pilot module) contains documents in six languages: Dutch (NL), English (EN), French (FR), German (DE),Italian (IT) and Spanish (ES). 
 
-## The Wikipedia module
+### The Wikipedia module
 It was created selecting from **[BabelNet domains](http://lcl.uniroma1.it/babeldomains/)** all the **[Wikipedia](https://www.wikipedia.org)** musical pages.
 
-### Metadata
+#### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | url                                                                                                                                                                                                                                | url           | done?   |   
-|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------|
-| DE   | **[.tsv](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE.xlsx?d=w2517edd7efc44c3dae7ad38650fc1c8e&csf=1&web=1&e=FaOeXW)** | **[.xlsx]()** | &#9745; |
-| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataEN.tsv?csf=1&web=1&e=pRPo7t)**                                      | **[.xlsx]()** | &#9745; |
-| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataES.tsv?csf=1&web=1&e=AdGzJk)**                                      | **[.xlsx]()** | &#9745; |
-| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataFR.tsv?csf=1&web=1&e=woKOHY)**                                      | **[.xlsx]()** | &#9745; |
-| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataIT.tsv?csf=1&web=1&e=9QWy3S)**                                      | **[.xlsx]()** | &#9745; |
-| NL   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataNL.tsv?csf=1&web=1&e=28zhsf)**                                      | **[.xlsx]()** | &#9745; |
-| All | **[.tsv]()**                                                                                                                                                                                                                       | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**| &#9745; |
+| lang | tsv                                                                                                                                                                                                                                | xlsx           |    
+|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| DE   | **[.tsv](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE.xlsx?d=w2517edd7efc44c3dae7ad38650fc1c8e&csf=1&web=1&e=FaOeXW)** |  | &#9745; |
+| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataEN.tsv?csf=1&web=1&e=pRPo7t)**                                      |  | &#9745; |
+| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataES.tsv?csf=1&web=1&e=AdGzJk)**                                      |  | &#9745; |
+| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataFR.tsv?csf=1&web=1&e=woKOHY)**                                      |  | &#9745; |
+| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataIT.tsv?csf=1&web=1&e=9QWy3S)**                                      |  | &#9745; |
+| NL   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataNL.tsv?csf=1&web=1&e=28zhsf)**                                      |  | &#9745; |
+| All |                                                                                                                                                                                                                        | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**|
 
-### Data
+#### Data
 
 The data of the module can be downloaded from:
 
-| lang | url            | done? |
-|------|----------------|-------|
-| DE   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/DE.tar.gz?csf=1&web=1&e=UdFhO5)** | &#9745;  |
-| EN   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/EN.tar.gz?csf=1&web=1&e=cPKFfg)**       | &#9745; |
-| ES   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/ES.tar.gz?csf=1&web=1&e=BeklUc)**       | &#9745; |
-| FR   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/FR.tar.gz?csf=1&web=1&e=7sGRRs)**        | &#9745; |
-| IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/IT.tar.gz?csf=1&web=1&e=K6j6ve)**        | &#9745; |
-| NL   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/NL.tar.gz?csf=1&web=1&e=SwP1gK)**        | &#9745; |
+| lang | url            | 
+|------|----------------|
+| DE   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/DE.tar.gz?csf=1&web=1&e=UdFhO5)** |
+| EN   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/EN.tar.gz?csf=1&web=1&e=cPKFfg)**       |
+| ES   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/ES.tar.gz?csf=1&web=1&e=BeklUc)**       |
+| FR   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/FR.tar.gz?csf=1&web=1&e=7sGRRs)**        |
+| IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/IT.tar.gz?csf=1&web=1&e=K6j6ve)**        |
+| NL   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/NL.tar.gz?csf=1&web=1&e=SwP1gK)**        |
 
 
-### Statistics
+#### Statistics
 
 Some statistics of the module are provided below:
 
@@ -54,35 +96,28 @@ Some statistics of the module are provided below:
 | IT   | 77.986 | 1.548.981 | 47.497.487 | 491.500 | 14.519.636 | 2.649.949 |
 | NL   | 36.609 | 1.246.881 | 23.539.528 | 479.962 | 4.716.170 | 2.453.332 |
 
-## The Books module
+### The Books module
 It was created using the **[Polifonia Textual Corpus Population](https://github.com/polifonia-project/textual-corpus-population)** module that allows to access different digital libraries (such as **[BNF](https://gallica.bnf.fr)** and **[BNE](http://www.bne.es)**) and to select from them documents related to music. The PTCPM allows also to perform optical character recognition (OCR) on images and PDF files. 
 
-### Metadata
+#### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | .tsv                                                                                                                                                                                  | .xlsx         | &#9745; | 
-|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------| ------- |
-| DE   | **[.tsv]()**                                                                                                                                                                          | **[.xlsx]()** | &#9745; |
-| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataEN.tsv?csf=1&web=1&e=ZMwthB)** | **[.xlsx]()** | &#9745; |
-| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** | **[.xlsx]()** | &#9745; |
-| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** | **[.xlsx]()** | &#9745; |
-| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataIT.tsv?csf=1&web=1&e=THUvPH)** | **[.xlsx]()** | &#9745; |
-| NL   | **[.tsv]()**                                                                                                                                                                          | **[.xlsx]()** | &#9745; |
-### Data
+| lang | .tsv                                                                                                                                                                                  |  
+|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| DE   | ****                                                                                                                                                                          | **** | 
+| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataEN.tsv?csf=1&web=1&e=ZMwthB)** |  
+| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** |  
+| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** |  
+| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataIT.tsv?csf=1&web=1&e=THUvPH)** |  
+| NL   | ****                                                                                                                                                                          |  
+#### Data
 
-The data of the module can not be downloaded due to copyright issue. However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
-
-| lang | url            | - |
-|------|----------------|---|
-| DE   | http://        | - |
-| EN   | http://        | - |
-| ES   | http://        | - |
-| FR   | http://        | - |
-| IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/IT/txt.tar.gz?csf=1&web=1&e=CL2QIQ)** | - |
-| NL   | http://        | - |
+The data of the module can not be downloaded due to copyright issue.
+However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
+Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
 
 
-### Statistics
+#### Statistics
 
 Some statistics of the module are provided below:
 
@@ -95,36 +130,29 @@ Some statistics of the module are provided below:
 | IT   | http://    | -          | -       | -       |
 | NL   | http://    | -          | -       | -       |
 
-## The Periodicals module
+### The Periodicals module
 It was created with the help of musicologists that provided the titles of different influencial music periodicals.
 
-### Metadata
+#### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
+| lang | url     | 
+|------|---------|
+| DE   | http:// |
+| EN   | http:// |
+| ES   | http:// |
+| FR   | http:// |
+| IT   | http:// |
+| NL   | http:// |
 
-### Data
+#### Data
 
-The data of this module can not be downloaded due to copyright issues. However, it is possible to reconstruct the corpus using the metadata provided in previous section.
-
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
+The data of the module can not be downloaded due to copyright issue.
+However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
+Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
 
 
-### Statistics
+#### Statistics
 
 Some statistics of the module are provided below:
 
@@ -138,7 +166,7 @@ Some statistics of the module are provided below:
 | IT   | http://    | -          | -       | -       |
 | NL   | http://    | -          | -       | -       |
 
-## The Polifonia Pilots module
+### The Polifonia Pilots module
 It was created collecting the textual material selected by five **[Polifonia Pilots](https://polifonia-project.eu/pilots/)**:
 - BELLS
 - CHILD
@@ -146,7 +174,7 @@ It was created collecting the textual material selected by five **[Polifonia Pil
 - MUSICBO
 - ORGANS
 
-### Metadata
+#### Metadata
 The metadata of the module can be downloaded from:
 
 | Pilot   | url     | -   |
@@ -158,30 +186,30 @@ The metadata of the module can be downloaded from:
 | ORGANS  | http:// | - |
 
 
-### Data
+#### Data
 
 The data of some pilot can not be downloaded due to copyright issues. The available data can be foung below:
 
 | Pilot   | url     | - |
 |---------|---------|---|
-| BELLS   | http:// | - |
 | CHILD   | http:// | - |
 | MEETUPS | http:// | - |
-| MUSICBO | http:// | - |
 | ORGANS  | http:// | - |
 
+However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
+Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
 
 
-### Statistics
+#### Statistics
 
 Some statistics of the module are provided below:
 
 | lang    | #documents | #sentences | #tokens |#entities|
 |---------|------------|------------|---------|---------|
-| BELLS   | http://    | -          | -       | -       |
-| CHILD   | http://    | -          | -       | -       |
-| MEETUPS | http://    | -          | -       | -       |
-| MUSICBO | http://    | -          | -       | -       |
-| ORGANS  | http://    | -          | -       | -       |
+| BELLS   | -          | -          | -       | -       |
+| CHILD   | -          | -          | -       | -       |
+| MEETUPS | -          | -          | -       | -       |
+| MUSICBO | -          | -          | -       | -       |
+| ORGANS  | -          | -          | -       | -       |
 
 

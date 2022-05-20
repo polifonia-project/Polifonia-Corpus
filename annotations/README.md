@@ -111,16 +111,30 @@ It was created selecting from **[BabelNet domains](http://lcl.uniroma1.it/babeld
 ### Annotations
 The annotation of the module can be downloaded from:
 
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
+| lang | url     |
+|------|---------|
+| DE   | ** ** |
+| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1okwLJSZu1yO12GP34hMazGdcudxqVWvK)|
+| ES   | ** ** |
+| FR   | ** ** |
+| IT   | ** ** |
+| NL   | ** ** |
 
+## The Books module
+It was created with the help of musicologists that provided the titles of different influencial music periodicals.
 
+### Annotations
+
+The annotation of the module can be downloaded from:
+
+| lang | url   |
+|------|-------|
+| DE   | ** ** |
+| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1DoLyf74mHsN35DAC97cjlaQjIUakL4Qa)|
+| ES   | ** ** |
+| FR   | ** ** |
+| IT   | ** ** |
+| NL   | ** ** |
 
 ## The Periodicals module
 It was created with the help of musicologists that provided the titles of different influencial music periodicals.
@@ -129,14 +143,14 @@ It was created with the help of musicologists that provided the titles of differ
 
 The annotation of the module can be downloaded from:
 
-| lang | url     | - |
-|------|---------|---|
-| DE   | http:// | - |
-| EN   | http:// | - |
-| ES   | http:// | - |
-| FR   | http:// | - |
-| IT   | http:// | - |
-| NL   | http:// | - |
+| lang | url   |
+|------|-------|
+| DE   | ** ** |
+| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=11J-88UWzxZ76LC9doSYF999W-z-TVQU9)|
+| ES   | ** ** |
+| FR   | ** ** |
+| IT   | ** ** |
+| NL   | ** ** |
 
 
 
@@ -153,10 +167,10 @@ It was created collecting the textual material selected by five **[Polifonia Pil
 
 The annotation of the module can be downloaded from:
 
-| Pilot   | url     | -   |
-|---------|---------|-----|
-| BELLS   | http:// | - |
-| CHILD   | http:// | - |
-| MEETUPS | http:// | - |
-| MUSICBO | http:// | - |
-| ORGANS  | http:// | - |
+| Pilot   | url   |
+|---------|-------|
+| BELLS   | ** ** |
+| CHILD   | ** ** |
+| MEETUPS | ** ** |
+| MUSICBO | ** ** |
+| ORGANS  | ** ** |
