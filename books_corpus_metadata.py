@@ -120,8 +120,8 @@ def meta_db(database, lang, outpath):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--lang', type=str, default='ES')
-    parser.add_argument('--dbpath', type=str, default='/media/rocco/34b2975e-ad76-46e8-b024-3729a4fc15ac/rocco2/rocco/Polifonia Corpus - Data/Polifonia_Books_Corpus/BNE_books.db')
+    parser.add_argument('--lang', type=str)
+    parser.add_argument('--dbpath', type=str)
     parser.add_argument('--output_folder', type=str, default='/media/rocco/34b2975e-ad76-46e8-b024-3729a4fc15ac/rocco2/rocco/Polifonia_Corpus_Data/Polifonia_Books_Corpus/metadata')
     return parser.parse_args()
 

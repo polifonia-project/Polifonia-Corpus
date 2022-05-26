@@ -121,14 +121,14 @@ Furthermore, the data processed and annotated can be accessed interrogating the 
 
 Some statistics of the module are provided below:
 
-| lang | #documents | #sentences | #tokens |#entities|
-|------|------------|------------|---------|---------|
-| DE   | http://    | -          | -       | -       |
-| EN   | http://    | -          | -       | -       |
-| ES   | http://    | -          | -       | -       |
-| FR   | http://    | -          | -       | -       |
-| IT   | http://    | -          | -       | -       |
-| NL   | http://    | -          | -       | -       |
+| lang | #documents | #sentences | #tokens       | #entities  |
+|------|------------|------------|---------------|------------|
+| DE   | -          | -          | -             | -          |
+| EN   | 25.000     | 52.258.053 | 1.104.099.331 | 92.062.762 |
+| ES   | -          | -          | -             | -          |
+| FR   | -          | -          | -             | -          |
+| IT   | -          | -          | -             | -          |
+| NL   | -          | -          | -             | -          |
 
 ### The Periodicals module
 It was created with the help of musicologists that provided the titles of different influencial music periodicals.
@@ -136,14 +136,14 @@ It was created with the help of musicologists that provided the titles of differ
 #### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | url     | 
-|------|---------|
-| DE   | http:// |
-| EN   | http:// |
-| ES   | http:// |
-| FR   | http:// |
-| IT   | http:// |
-| NL   | http:// |
+| lang | url | 
+|------|----|
+| DE   | -  |
+| EN   |    |
+| ES   | -  |
+| FR   | -  |
+| IT   | -  |
+| NL   | -  |
 
 #### Data
 
@@ -159,12 +159,12 @@ Some statistics of the module are provided below:
 
 | lang | #documents | #sentences | #tokens |#entities |
 |------|------------|------------|---------|---------|
-| DE   | http://    | -          | -       | -       |
-| EN   | http://    | -          | -       | -       |
-| ES   | http://    | -          | -       | -       |
-| FR   | http://    | -          | -       | -       |
-| IT   | http://    | -          | -       | -       |
-| NL   | http://    | -          | -       | -       |
+| DE   | -          | -          | -       | -       |
+| EN   | 3.037      | 4.408.939  | 1.734.895 | 7.400.977 |
+| ES   | -          | -          | -       | -       |
+| FR   | -          | -          | -       | -       |
+| IT   | -          | -          | -       | -       |
+| NL   | -          | -          | -       | -       |
 
 ### The Polifonia Pilots module
 It was created collecting the textual material selected by five **[Polifonia Pilots](https://polifonia-project.eu/pilots/)**:
