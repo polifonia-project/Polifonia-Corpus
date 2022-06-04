@@ -43,7 +43,7 @@ The interrogation folder contains a README.md file that explain how to interroga
 
 ## The corpus
 
-> :warning: **Only the English part of the annotations are ready at this stage**
+> :warning: **Only the English part of the annotations is ready at this stage**
 
 The corpus is dived into four modules:
 - the Wikipedia module

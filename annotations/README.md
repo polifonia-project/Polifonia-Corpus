@@ -114,7 +114,7 @@ The annotation of the module can be downloaded from:
 | lang | url     |
 |------|---------|
 | DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1okwLJSZu1yO12GP34hMazGdcudxqVWvK)|
+| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=15EEwvOgOw-oN3q_FCfxVlxWpSqSGjohp)|
 | ES   | ** ** |
 | FR   | ** ** |
 | IT   | ** ** |
@@ -130,7 +130,7 @@ The annotation of the module can be downloaded from:
 | lang | url   |
 |------|-------|
 | DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1DoLyf74mHsN35DAC97cjlaQjIUakL4Qa)|
+| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1a2RYX-GdcIwY2XCKsQIYOr9QbSGpoA0x)|
 | ES   | ** ** |
 | FR   | ** ** |
 | IT   | ** ** |
