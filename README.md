@@ -109,7 +109,7 @@ The metadata of the module can be downloaded from:
 | ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** |  
 | FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** |  
 | IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataIT.tsv?csf=1&web=1&e=THUvPH)** |  
-| NL   | ****                                                                                                                                                                          |  
+| NL   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataNL.tsv?csf=1&web=1&e=2JfgLo)** |    
 #### Data
 
 The data of the module can not be downloaded due to copyright issue.
@@ -136,14 +136,14 @@ It was created with the help of musicologists that provided the titles of differ
 #### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | url | 
-|------|----|
-| DE   | -  |
-| EN   |    |
-| ES   | -  |
-| FR   | -  |
-| IT   | -  |
-| NL   | -  |
+| lang | url                                                                                                                                                                                                  | 
+|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DE   | -                                                                                                                                                                                                    |
+| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Periodicals%20corpus/metadata/EN/periodicals_corpus_metadataEN.tsv?csf=1&web=1&e=1AGw0x)** |
+| ES   | -                                                                                                                                                                                                    |
+| FR   | -                                                                                                                                                                                                    |
+| IT   | -                                                                                                                                                                                                    |
+| NL   | -                                                                                                                                                                                                    |
 
 #### Data
 

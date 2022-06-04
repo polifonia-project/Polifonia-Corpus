@@ -2,7 +2,6 @@ import argparse
 import os
 import csv
 import pickle
-import json_lines
 from tqdm import tqdm
 from collections import Counter
 from utils.db_utils import create_connection
