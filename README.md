@@ -1,3 +1,20 @@
+---
+component-id: Polifonia-Corpus
+name: Polifonia Corpus
+description: Data, metadata, statistics, annotations and interrogation APIs of the Polifonia Textual Corpus.
+type: Repository
+release-date: 06/06/2022
+release-number: v0.0.1
+work-package: 
+- WP4
+licence:
+links:
+- https://github.com/polifonia-project/Polifonia-Corpus
+credits:
+- https://github.com/roccotrip
+- https://github.com/arianna-graciotti
+- https://github.com/EleonoraMarzi
+---
 
 # Polifonia Textual Corpus
 
