@@ -146,7 +146,7 @@ The annotation of the module can be downloaded from:
 | lang | url   |
 |------|-------|
 | DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1a2RYX-GdcIwY2XCKsQIYOr9QbSGpoA0x)|
+| EN   | [sqlite db](https://drive.google.com/uc?id=1a2RYX-GdcIwY2XCKsQIYOr9QbSGpoA0x)|
 | ES   | ** ** |
 | FR   | ** ** |
 | IT   | ** ** |
