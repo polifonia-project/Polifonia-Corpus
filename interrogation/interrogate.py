@@ -96,7 +96,7 @@ def print_sents(results, query):
 
 
 def save_results(Results, query, type, db):
-    with open(os.path.join('out/', '_'.join([db,type,query]) +'.tsv')) as f:
+    with open(os.path.join('out/', '_'.join([db,type,query]) +'.tsv'), 'w') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerows(Results)
 
