@@ -27,18 +27,24 @@ We annotated each text of the corpus with a NLP pipeline composed of:
 Steps 1-4 and 6 have been conducted using the **[SpaCy](http://spacy.io)** NLP library.
 For each language of the corpus we used a dedicated SpaCy Model:
 
-| lang | model name |
-|------|------------|
-| DE   | de_dep_news_trf |
+| lang | model name      |
+|------|-----------------|
+| DE   | de_core_news_lg |
 | EN   | en_core_web_trf |
-| ES   | es_dep_news_trf |
-| FR   | fr_dep_news_trf |
+| ES   | es_core_news_lg |
+| FR   | fr_core_news_lg |
 | IT   | it_core_news_lg |
 | NL   | nl_core_news_lg |
 
 Steps 5 and 7 require more sophisticated technologies.
-For this reason, we used **[EWISER](https://github.com/SapienzaNLP/ewiser)** for step 5 (Word Sense Disambiguation) for all the languages of the corpus.
-For step 7 we used **[ExTenD](https://github.com/SapienzaNLP/extend)** for English and **[mGENRE](https://github.com/facebookresearch/GENRE)** for all other languages of the corpus.
+For this reason, we used **[EWISER](https://github.com/SapienzaNLP/ewiser)** for step 5 (Word Sense Disambiguation) for English.
+The other languages of the corpus have been annotated using a new system developed within the project.
+It exploits recent advantages on lexical semantics and in particular on the representation of word senses (**[ARES](http://sensembert.org/)**) and a powerful WSD model (**[WSD-games](https://github.com/roccotrip/wsd_games_emb)**).
+The advantages of this new model are based on the fact that it is accurate, fast and can work efficiantly on different languages.
+For step 7 we used **[ExTenD](https://github.com/SapienzaNLP/extend)** for English.
+For the other language of the corpus we adapted **[WSD-games](https://github.com/roccotrip/wsd_games_emb)** to work on the entity linking task.
+Also in this case the model is accurate, fast and can work efficiantly on different languages.
+
 
 ## Annotation Example
 The annotations of the Polifonia Textual Corpus are provided in **[CoNLL-U format](https://universaldependencies.org/format.html)**.

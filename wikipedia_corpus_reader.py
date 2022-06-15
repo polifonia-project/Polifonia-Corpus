@@ -16,7 +16,7 @@ def read(corpus_folder, lang, return_content, limit, nlp):
         pages = pages[:limit]
     if return_content == 'Yes':
         for i, fname in enumerate(tqdm(pages, total=len(pages))):
-            with open(os.path.join(corpus_folder, lang, fname)) as f:
+            with open(os.path.join(corpus_folder, lang, fname), encoding="utf-8") as f:
                 page = bs(f.read(), 'html.parser')
                 content = []
                 for p in page.findAll('p'):

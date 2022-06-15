@@ -37,7 +37,6 @@ def read_periodicals(folder_path, lang, limit, nlp):
                 Texts[id_] = []
                 for t in text.split('.\n\n'):
                     doc = nlp(t)
-
                     Texts[id_] += [sent.text for sent in doc.sents if len(sent.text) > 12]
                 periodicals.append(id_)
                 if limit != 'No':
