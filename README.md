@@ -121,7 +121,7 @@ The metadata of the module can be downloaded from:
 
 | lang | .tsv                                                                                                                                                                                  |  
 |------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| DE   | ****                                                                                                                                                                          | **** | 
+| DE   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataDE.tsv?csf=1&web=1&e=UYQJlp)** |
 | EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataEN.tsv?csf=1&web=1&e=ZMwthB)** |  
 | ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** |  
 | FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** |  
