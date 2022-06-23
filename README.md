@@ -121,12 +121,12 @@ The metadata of the module can be downloaded from:
 
 | lang | .tsv                                                                                                                                                                                  |  
 |------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| DE   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataDE.tsv?csf=1&web=1&e=UYQJlp)** |
-| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataEN.tsv?csf=1&web=1&e=ZMwthB)** |  
-| ES   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataES.tsv?csf=1&web=1&e=h3XUBa)** |  
-| FR   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataFR.tsv?csf=1&web=1&e=0svG2v)** |  
-| IT   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataIT.tsv?csf=1&web=1&e=THUvPH)** |  
-| NL   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Books%20corpus/metadata/books_corpus_metadataNL.tsv?csf=1&web=1&e=2JfgLo)** |    
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671771.svg)](https://doi.org/10.5281/zenodo.6671771)
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671756.svg)](https://doi.org/10.5281/zenodo.6671756)  
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671765.svg)](https://doi.org/10.5281/zenodo.6671765)  
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671830.svg)](https://doi.org/10.5281/zenodo.6671830)
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671795.svg)](https://doi.org/10.5281/zenodo.6671795)  
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671868.svg)](https://doi.org/10.5281/zenodo.6671868)    
 #### Data
 
 The data of the module can not be downloaded due to copyright issue.
@@ -156,7 +156,7 @@ The metadata of the module can be downloaded from:
 | lang | url                                                                                                                                                                                                  | 
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DE   | -                                                                                                                                                                                                    |
-| EN   | **[.tsv](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Periodicals%20corpus/metadata/EN/periodicals_corpus_metadataEN.tsv?csf=1&web=1&e=1AGw0x)** |
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671912.svg)](https://doi.org/10.5281/zenodo.6671912)
 | ES   | -                                                                                                                                                                                                    |
 | FR   | -                                                                                                                                                                                                    |
 | IT   | -                                                                                                                                                                                                    |
