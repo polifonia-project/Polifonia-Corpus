@@ -92,12 +92,12 @@ The data of the module can be downloaded from:
 
 | lang | url            | 
 |------|----------------|
-| DE   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/DE.tar.gz?csf=1&web=1&e=UdFhO5)** |
-| EN   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/EN.tar.gz?csf=1&web=1&e=cPKFfg)**       |
-| ES   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/ES.tar.gz?csf=1&web=1&e=BeklUc)**       |
-| FR   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/FR.tar.gz?csf=1&web=1&e=7sGRRs)**        |
-| IT   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/IT.tar.gz?csf=1&web=1&e=K6j6ve)**        |
-| NL   | **[tar.gz](https://liveunibo.sharepoint.com/:u:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/NL.tar.gz?csf=1&web=1&e=SwP1gK)**        |
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671663.svg)](https://doi.org/10.5281/zenodo.6671663)
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671681.svg)](https://doi.org/10.5281/zenodo.6671681)
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671673.svg)](https://doi.org/10.5281/zenodo.6671673)
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671728.svg)](https://doi.org/10.5281/zenodo.6671728)
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671734.svg)](https://doi.org/10.5281/zenodo.6671734)
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671738.svg)](https://doi.org/10.5281/zenodo.6671738)
 
 
 #### Statistics
