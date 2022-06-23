@@ -4,10 +4,12 @@ from tqdm import tqdm
 from nltk.corpus import wordnet as wn
 import os
 from db_utils import *
+import zenodo_get
 import pandas as pd
-import gdown
+#import gdown
 import pickle
 import sys
+import requests
 
 def annotation2dict(annotation):
     annotation_ = [a.split('\t') for a in annotation]
@@ -220,20 +222,22 @@ def download_annotations(annotations_path, db_name):
             if i == 0:
                 continue
             name, lang, url = line.split(',')
+            url=url.strip()
             db_names['_'.join([name, lang])] = url
+            zenodo_get.zenodo_get([url])
 
-    gdown.download(db_names[db_name], os.path.join(annotations_path, db_name + '.db'), quiet=False)
-                # response = requests.get(url, stream=True)
-                # total_size_in_bytes = int(response.headers.get('content-lenght', 0))
-                # block_size = 1024
-                # progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
-                # with open(os.path.join(annotations_path, '_'.join([name, lang]) + '.db'), 'wb') as f:
-                #     for data in response.iter_content(block_size):
-                #         progress_bar.update(len(data))
-                #         f.write(data)
-                # progress_bar.close()
-                # if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
-                #     print('ERROR: something went wrong!')
+    #gdown.download(db_names[db_name], os.path.join(annotations_path, db_name + '.db'), quiet=False)
+            #response = requests.get(url, stream=True)
+            #total_size_in_bytes = int(response.headers.get('content-lenght', 0))
+            #block_size = 1024
+            #progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
+            #with open(os.path.join(annotations_path, '_'.join([name, lang]) + '.db'), 'wb') as f:
+            #    for data in response.iter_content(block_size):
+            #        progress_bar.update(len(data))
+            #        f.write(data)
+            #    progress_bar.close()
+            #    if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
+            #        print('ERROR: something went wrong!')
 
 def parse_args():
     parser = argparse.ArgumentParser()
