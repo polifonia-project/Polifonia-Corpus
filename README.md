@@ -60,8 +60,6 @@ The interrogation folder contains a README.md file that explain how to interroga
 
 ## The corpus
 
-> :warning: **Only the English part of the annotations is ready at this stage**
-
 The corpus is dived into four modules:
 - the Wikipedia module
 - the Books module
@@ -76,28 +74,28 @@ It was created selecting from **[BabelNet domains](http://lcl.uniroma1.it/babeld
 #### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | tsv                                                                                                                                                                                                                                | xlsx           |    
-|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671494.svg)](https://doi.org/10.5281/zenodo.6671494)
-| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671510.svg)](https://doi.org/10.5281/zenodo.6671510)                                      
-| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6670984.svg)](https://doi.org/10.5281/zenodo.6670984)                                      |  | &#9745; |
-| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671560.svg)](https://doi.org/10.5281/zenodo.6671560)
-| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671571.svg)](https://doi.org/10.5281/zenodo.6671571)
-| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671519.svg)](https://doi.org/10.5281/zenodo.6671519)
-| All |                                                                                                                                                                                                                        | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**|
+||  lang |  tsv                                                                                                      | xlsx           |    
+|-------|-----------------------------------------------------------------------------------------------------------|---------------|
+| DE    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671494.svg)](https://doi.org/10.5281/zenodo.6671494) 
+| EN    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671510.svg)](https://doi.org/10.5281/zenodo.6671510) 
+| ES    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6670984.svg)](https://doi.org/10.5281/zenodo.6670984) |  | &#9745; |
+| FR    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671560.svg)](https://doi.org/10.5281/zenodo.6671560) 
+| IT    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671571.svg)](https://doi.org/10.5281/zenodo.6671571) 
+| NL    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671519.svg)](https://doi.org/10.5281/zenodo.6671519) 
+| All   |                                                                                                           | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**|
 
 #### Data
 
 The data of the module can be downloaded from:
 
-| lang | url            | 
+| lang | url           | 
 |------|----------------|
-| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671663.svg)](https://doi.org/10.5281/zenodo.6671663)
-| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671681.svg)](https://doi.org/10.5281/zenodo.6671681)
-| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671673.svg)](https://doi.org/10.5281/zenodo.6671673)
-| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671728.svg)](https://doi.org/10.5281/zenodo.6671728)
-| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671734.svg)](https://doi.org/10.5281/zenodo.6671734)
-| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671738.svg)](https://doi.org/10.5281/zenodo.6671738)
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671663.svg)](https://doi.org/10.5281/zenodo.6671663)|
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671681.svg)](https://doi.org/10.5281/zenodo.6671681)|
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671673.svg)](https://doi.org/10.5281/zenodo.6671673)|
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671728.svg)](https://doi.org/10.5281/zenodo.6671728)|
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671734.svg)](https://doi.org/10.5281/zenodo.6671734)|
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671738.svg)](https://doi.org/10.5281/zenodo.6671738)|
 
 
 #### Statistics
@@ -119,14 +117,15 @@ It was created using the **[Polifonia Textual Corpus Population](https://github.
 #### Metadata
 The metadata of the module can be downloaded from:
 
-| lang | .tsv                                                                                                                                                                                  |  
-|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671771.svg)](https://doi.org/10.5281/zenodo.6671771)
-| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671756.svg)](https://doi.org/10.5281/zenodo.6671756)  
-| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671765.svg)](https://doi.org/10.5281/zenodo.6671765)  
-| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671830.svg)](https://doi.org/10.5281/zenodo.6671830)
-| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671795.svg)](https://doi.org/10.5281/zenodo.6671795)  
-| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671868.svg)](https://doi.org/10.5281/zenodo.6671868)    
+| lang | .tsv                                                                                                      |
+|------|-----------------------------------------------------------------------------------------------------------|
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671771.svg)](https://doi.org/10.5281/zenodo.6671771) |
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671756.svg)](https://doi.org/10.5281/zenodo.6671756) |
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671765.svg)](https://doi.org/10.5281/zenodo.6671765) |
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671830.svg)](https://doi.org/10.5281/zenodo.6671830) |
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671795.svg)](https://doi.org/10.5281/zenodo.6671795) |
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671868.svg)](https://doi.org/10.5281/zenodo.6671868) | 
+
 #### Data
 
 The data of the module can not be downloaded due to copyright issue.
@@ -156,7 +155,7 @@ The metadata of the module can be downloaded from:
 | lang | url                                                                                                                                                                                                  | 
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DE   | -                                                                                                                                                                                                    |
-| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671912.svg)](https://doi.org/10.5281/zenodo.6671912)
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671912.svg)](https://doi.org/10.5281/zenodo.6671912)|
 | ES   | -                                                                                                                                                                                                    |
 | FR   | -                                                                                                                                                                                                    |
 | IT   | -                                                                                                                                                                                                    |
@@ -174,15 +173,14 @@ Furthermore, the data processed and annotated can be accessed interrogating the 
 Some statistics of the module are provided below:
 
 
-| lang | #documents | #sentences | #tokens |#entities |
-|------|------------|------------|---------|---------|
-| DE   | -          | -          | -       | -       |
-| EN   | 3.037      | 4.408.939  | 1.734.895 | 7.400.977 |
-| ES   | -          | -          | -       | -       |
-| FR   | -          | -          | -       | -       |
-| IT   | -          | -          | -       | -       |
-| NL   | -          | -          | -       | -       |
-
+| lang | #documents | #sentences | #types    | #tokens    |
+| ------ |------------|------------|-----------|------------|
+| DE | 705        | 121.113    | 544.376   | 2.405.289  | 
+| EN | 2.868      | 4.400.015  | 7.342.527 | 76.180.398 | 
+| ES | 455        | 87.025     | 677.041   | 3.170.480  | 
+| FR | 349        | 329.166    | 696.427   | 5.111.915  | 
+| IT | 1.251      | 433.465    | 992.902   | 7.879.459  | 
+| NL | 125        | 187.350    | 716.506   | 3.880.499  | 
 ### The Polifonia Pilots module
 It was created collecting the textual material selected by five **[Polifonia Pilots](https://polifonia-project.eu/pilots/)**:
 - BELLS
@@ -194,24 +192,24 @@ It was created collecting the textual material selected by five **[Polifonia Pil
 #### Metadata
 The metadata of the module can be downloaded from:
 
-| Pilot   | url     | -   |
-|---------|---------|-----|
-| BELLS   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672061.svg)](https://doi.org/10.5281/zenodo.6672061)
-| CHILD   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672093.svg)](https://doi.org/10.5281/zenodo.6672093)
-| MEETUPS | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672133.svg)](https://doi.org/10.5281/zenodo.6672133)
-| MUSICBO | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672165.svg)](https://doi.org/10.5281/zenodo.6672165)
-| ORGANS  | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672193.svg)](https://doi.org/10.5281/zenodo.6672193)
+| Pilot   | url     |
+|---------|---------|
+| BELLS   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672061.svg)](https://doi.org/10.5281/zenodo.6672061)|
+| CHILD   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672093.svg)](https://doi.org/10.5281/zenodo.6672093)|
+| MEETUPS | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672133.svg)](https://doi.org/10.5281/zenodo.6672133)|
+| MUSICBO | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672165.svg)](https://doi.org/10.5281/zenodo.6672165)|
+| ORGANS  | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6672193.svg)](https://doi.org/10.5281/zenodo.6672193)|
 
 
 #### Data
 
 The data of some pilot can not be downloaded due to copyright issues. The available data can be foung below:
 
-| Pilot   | url     | - |
-|---------|---------|---|
-| CHILD   | http:// | - |
-| MEETUPS | http:// | - |
-| ORGANS  | http:// | - |
+| Pilot   | url     |
+|---------|---------|
+| CHILD   | http:// |
+| MEETUPS | http:// |
+| ORGANS  | http:// |
 
 However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
 Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
@@ -221,12 +219,12 @@ Furthermore, the data processed and annotated can be accessed interrogating the 
 
 Some statistics of the module are provided below:
 
-| lang    | #documents | #sentences | #tokens |#entities|
-|---------|------------|------------|---------|---------|
-| BELLS   | -          | -          | -       | -       |
-| CHILD   | -          | -          | -       | -       |
-| MEETUPS | -          | -          | -       | -       |
-| MUSICBO | -          | -          | -       | -       |
-| ORGANS  | -          | -          | -       | -       |
+| pilot   | #documents | #sentences | #types    | #tokens    |
+|---------|------------|------------|-----------|------------|
+| BELLS   | 59         | 18.481     | 128.061   | 434.439    | 
+| CHILD   | 30         | 157.815    | 361.550   | 3.442.840  | 
+| MEETUPS | 19.476     | 822.861    | 1.631.371 | 21.536.135 | 
+| MUSICBO | 46         | 51.781     | 289.247   | 1.412.456  | 
+| ORGANS  | 1.660      | 25.647     | 45.298    | 368.439    | 
 
 
