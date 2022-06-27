@@ -18,8 +18,6 @@ credits:
 
 # Polifonia Textual Corpus
 
-> :warning: **Only the English part of the annotations can be downloaded at this stage**
-
 This repository contains the script to access, parse, annotate and interrogate the data and metadata of the Polifonia Textual Corpus.
 
 The high level structure of the repository is the following:
@@ -154,13 +152,12 @@ The metadata of the module can be downloaded from:
 
 | lang | url                                                                                                                                                                                                  | 
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761779.svg)](https://doi.org/10.5281/zenodo.6761779)|
+| DE   | -                                                                                                                                                                                                    |
 | EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671912.svg)](https://doi.org/10.5281/zenodo.6671912)|
-| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761787.svg)](https://doi.org/10.5281/zenodo.6761787)|
-| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761794.svg)](https://doi.org/10.5281/zenodo.6761794)|
-| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761806.svg)](https://doi.org/10.5281/zenodo.6761806)|
-| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761809.svg)](https://doi.org/10.5281/zenodo.6761809)|
-                                                                                                                                                          
+| ES   | -                                                                                                                                                                                                    |
+| FR   | -                                                                                                                                                                                                    |
+| IT   | -                                                                                                                                                                                                    |
+| NL   | -                                                                                                                                                                                                    |
 
 #### Data
 

@@ -1,7 +1,5 @@
 # Interrogation Functionalities of Polifonia Textual Corpus
 
-> :warning: **Only the English part of the corpus can be interrogated at this stage**
-
 The interrogation of the corpus takes advantage of the annotation described in the *[annotations](https://github.com/polifonia-project/Polifonia-Corpus/tree/master/annotations)* section of this repository.
 
 The main script to use to interrogate the corpus is:
