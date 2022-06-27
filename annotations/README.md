@@ -136,7 +136,7 @@ The annotation of the module can be downloaded from:
 | lang | url   |
 |------|-------|
 | DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1a2RYX-GdcIwY2XCKsQIYOr9QbSGpoA0x)|
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759156.svg)](https://doi.org/10.5281/zenodo.6759156)|
 | ES   | ** ** |
 | FR   | ** ** |
 | IT   | ** ** |
