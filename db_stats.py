@@ -59,7 +59,7 @@ def count_sents(conn, lang):
 
 
 def stats(annotations_path):
-    corpora = ['Pilots']
+    corpora = ['Books']
     langs = ['DE', 'EN', 'ES', 'FR', 'IT', 'NL']
     pilots = ['BELLS', 'CHILD', 'MEETUPS', 'MUSICBO', 'ORGANS']
     for corpus in corpora:

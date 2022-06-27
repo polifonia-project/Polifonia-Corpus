@@ -137,14 +137,14 @@ Furthermore, the data processed and annotated can be accessed interrogating the 
 
 Some statistics of the module are provided below:
 
-| lang | #documents | #sentences | #tokens       | #entities  |
-|------|------------|------------|---------------|------------|
-| DE   | -          | -          | -             | -          |
-| EN   | 25.000     | 52.258.053 | 1.104.099.331 | 92.062.762 |
-| ES   | -          | -          | -             | -          |
-| FR   | -          | -          | -             | -          |
-| IT   | -          | -          | -             | -          |
-| NL   | -          | -          | -             | -          |
+| lang | #documents | #sentences | #types    | #tokens    |
+| ------ |------------|------------|-----------|------------|
+| DE | 237        | 38.633     | 121.530   | 489.225    | 
+| EN | 360        | 49.595     | 185.280   | 940.232    | 
+| ES | 41.093     | 731.606    | 1.852.430 | 20.180.197 | 
+| FR | 265        | 633.173    | 1.305.283 | 14.354.611 | 
+| IT | 12200      | 202.730    | 405.099   | 2.571.090  | 
+| NL | 83         | 116.593    | 539.102   | 1.779.824  | 
 
 ### The Periodicals module
 It was created with the help of musicologists that provided the titles of different influencial music periodicals.

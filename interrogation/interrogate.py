@@ -1,15 +1,11 @@
 import argparse
 import csv
-from tqdm import tqdm
 from nltk.corpus import wordnet as wn
 import os
 from db_utils import *
 import zenodo_get
-import pandas as pd
-#import gdown
 import pickle
 import sys
-import requests
 
 def annotation2dict(annotation):
     annotation_ = [a.split('\t') for a in annotation]
@@ -93,8 +89,6 @@ def print_sents(results, query):
         except:
             continue
     return Results
-    #with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-    #    print(results.to_string)
 
 
 def save_results(Results, query, type, db):
@@ -103,7 +97,7 @@ def save_results(Results, query, type, db):
         writer.writerows(Results)
 
 
-def select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file):
+def select_sents_with_keyword(conn, query, sent_n):
     c = conn.cursor()
     offset = 0
     more = ''
@@ -137,7 +131,7 @@ def get_concept(query, concepts):
         offset = '0' + offset
     return 'wn:' + offset + concept.pos(), concept
 
-def select_sents_with_concept(conn, query, sent_n, corpus, save_to_file):
+def select_sents_with_concept(conn, query, sent_n):
     concepts = wn.synsets(query)
     wn_key, concept = get_concept(query, concepts)
     c = conn.cursor()
@@ -178,7 +172,7 @@ def get_entity(query, entities, lang):
     return concept
 
 
-def select_sents_with_entity(conn, query, sent_n, corpus, lang, save_to_file):
+def select_sents_with_entity(conn, query, sent_n, lang):
 
     # TO BE IMPLMEMENTED:
     # use the Polifonia KB to retrieve all the entities related to a query
@@ -207,11 +201,11 @@ def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_
             raise
     conn = create_connection(db_path)
     if interrogation_type == 'keyword':
-        Results = select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file)
+        Results = select_sents_with_keyword(conn, query, sent_n, corpus)
     elif interrogation_type == 'concept':
-        Results = select_sents_with_concept(conn, query, sent_n, corpus, save_to_file)
+        Results = select_sents_with_concept(conn, query, sent_n, corpus)
     elif interrogation_type == 'entity':
-        Results = select_sents_with_entity(conn, query, sent_n, corpus, lang, save_to_file)
+        Results = select_sents_with_entity(conn, query, sent_n, lang)
     if save_to_file == 'Yes':
         save_results(Results, query, 'keyword', corpus)
         print('{} sentences stored'.format(len(Results)))
@@ -228,7 +222,7 @@ def download_annotations(annotations_path, module, lang):
             db_names['_'.join([name, lang])] = url
     db_name = db_names.get('_'.join([module, lang]), '')
     if db_name == '-':
-        print('The access to this database is restricted. Please contact the developers to see if it is possible to obtain it.')
+        print('The access to the database you are trying to download is restricted. Please contact the developers to see if it is possible to obtain it.')
         return 0
     elif db_name == '':
         print('The database that you are trying to download do not exist. Please try with different parameters.')
@@ -257,7 +251,7 @@ def parse_args():
                         help="It can be Wikipedia, Books, Periodicals or Pilots")
     parser.add_argument('--lang', type=str, default='EN', help="It can be DE, EN, ES, FR, IT or NL")
     parser.add_argument('--interrogation_type', type=str, default='entity',
-                        help="It can be Keyword, concept or entity")
+                        help="It can be keyword, concept or entity")
     parser.add_argument('--query', type=str, default='wagner')
     parser.add_argument('--sent_n', type=int, default=50)
     parser.add_argument('--save_to_file', type=str, default='No')
