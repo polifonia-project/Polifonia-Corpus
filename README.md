@@ -203,7 +203,7 @@ The metadata of the module can be downloaded from:
 
 #### Data
 
-The data of some pilot can not be downloaded due to copyright issues. The available data can be foung below:
+The data of some pilot can not be downloaded due to copyright issues. The available data can be found below:
 
 | Pilot   | url     |
 |---------|---------|
