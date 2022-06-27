@@ -154,12 +154,13 @@ The metadata of the module can be downloaded from:
 
 | lang | url                                                                                                                                                                                                  | 
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DE   | -                                                                                                                                                                                                    |
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761779.svg)](https://doi.org/10.5281/zenodo.6761779)|
 | EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671912.svg)](https://doi.org/10.5281/zenodo.6671912)|
-| ES   | -                                                                                                                                                                                                    |
-| FR   | -                                                                                                                                                                                                    |
-| IT   | -                                                                                                                                                                                                    |
-| NL   | -                                                                                                                                                                                                    |
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761787.svg)](https://doi.org/10.5281/zenodo.6761787)|
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761794.svg)](https://doi.org/10.5281/zenodo.6761794)|
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761806.svg)](https://doi.org/10.5281/zenodo.6761806)|
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761809.svg)](https://doi.org/10.5281/zenodo.6761809)|
+                                                                                                                                                          
 
 #### Data
 

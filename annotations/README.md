@@ -117,14 +117,14 @@ It was created selecting from **[BabelNet domains](http://lcl.uniroma1.it/babeld
 ### Annotations
 The annotation of the module can be downloaded from:
 
-| lang | url     |
-|------|---------|
-| DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?id=1Hv9yJVbaAx6DlRAO5RwCAwYG4w4Z33dJ)|
-| ES   | ** ** |
-| FR   | ** ** |
-| IT   | ** ** |
-| NL   | ** ** |
+| lang | url   |
+|------|-------|
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6702689.svg)](https://doi.org/10.5281/zenodo.6702689)|
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759156.svg)](https://doi.org/10.5281/zenodo.6759156)|
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759021.svg)](https://doi.org/10.5281/zenodo.6759021)|
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759025.svg)](https://doi.org/10.5281/zenodo.6759025)|
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759017.svg)](https://doi.org/10.5281/zenodo.6759017)|
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6757537.svg)](https://doi.org/10.5281/zenodo.6757537)|
 
 ## The Books module
 It was created with the help of musicologists that provided the titles of different influencial music periodicals.
@@ -136,7 +136,7 @@ The annotation of the module can be downloaded from:
 | lang | url   |
 |------|-------|
 | DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1a2RYX-GdcIwY2XCKsQIYOr9QbSGpoA0x)|
+| EN   | ** ** |
 | ES   | ** ** |
 | FR   | ** ** |
 | IT   | ** ** |
@@ -176,7 +176,7 @@ The annotation of the module can be downloaded from:
 | Pilot   | url   |
 |---------|-------|
 | BELLS   | ** ** |
-| CHILD   | ** ** |
-| MEETUPS | ** ** |
+| CHILD   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759261.svg)](https://doi.org/10.5281/zenodo.6759261) |
+| MEETUPS | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759272.svg)](https://doi.org/10.5281/zenodo.6759272) |
 | MUSICBO | ** ** |
 | ORGANS  | ** ** |
