@@ -3,7 +3,7 @@ import csv
 from nltk.corpus import wordnet as wn
 import os
 from db_utils import *
-import zenodo_get
+import wget
 import pickle
 import sys
 
@@ -80,9 +80,8 @@ def print_sents(results, query):
     #results = pd.DataFrame.from_records(data=results.fetchall(), columns=cols)
     Results = []
     for result in results:
-        res = [result[0], result[1], result[2].split('\n')[2]]
-        #print(res[0],  res[1])
         try:
+            res = [result[0], result[1], result[2].split('\n')[2]]
             idx = res[2].split().index(query)
             print(res[0].ljust(30), ' '.join(res[2].split()[idx-8:idx]).rjust(60), query.center(10), ' '.join(res[2].split()[idx+1:idx+9]).ljust(60))
             Results.append(res)
@@ -194,22 +193,27 @@ def select_sents_with_entity(conn, query, sent_n, lang):
 
 
 def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_n, save_to_file):
-    db_path = os.path.join(annotations_path, corpus.capitalize() + '_' + lang.upper() + '.db')
+    if len(lang) != 2:
+        lang.capitalize()
+    db_path = os.path.join(annotations_path, corpus.capitalize() + '-' + lang + '.db')
     if os.path.exists(db_path) == False:
-        d = download_annotations(annotations_path, corpus.capitalize(), lang.upper())
-        if d == 0:
-            raise
+        download_annotations(annotations_path, corpus.capitalize(), lang.upper())
     conn = create_connection(db_path)
     if interrogation_type == 'keyword':
-        Results = select_sents_with_keyword(conn, query, sent_n, corpus)
+        Results = select_sents_with_keyword(conn, query, sent_n)
     elif interrogation_type == 'concept':
-        Results = select_sents_with_concept(conn, query, sent_n, corpus)
+        Results = select_sents_with_concept(conn, query, sent_n)
     elif interrogation_type == 'entity':
         Results = select_sents_with_entity(conn, query, sent_n, lang)
     if save_to_file == 'Yes':
         save_results(Results, query, 'keyword', corpus)
         print('{} sentences stored'.format(len(Results)))
 
+def bar_progress(current, total, width=80):
+  progress_message = "Downloading: %d%% [%d / %d] bytes" % (current / total * 100, current, total)
+  # Don't use print() as it will print in new line every time.
+  sys.stdout.write("\r" + progress_message)
+  sys.stdout.flush()
 
 def download_annotations(annotations_path, module, lang):
     db_names = dict()
@@ -217,19 +221,16 @@ def download_annotations(annotations_path, module, lang):
         for i, line in enumerate(f.readlines()):
             if i == 0:
                 continue
-            name, lang, url = line.split(',')
+            name, lang_, url = line.split(',')
             url=url.strip()
-            db_names['_'.join([name, lang])] = url
-    db_name = db_names.get('_'.join([module, lang]), '')
-    if db_name == '-':
-        print('The access to the database you are trying to download is restricted. Please contact the developers to see if it is possible to obtain it.')
-        return 0
-    elif db_name == '':
-        print('The database that you are trying to download do not exist. Please try with different parameters.')
-        return 0
+            db_names['_'.join([name, lang_])] = url
+    url = db_names.get('_'.join([module, lang]), '')
+    if url == '-':
+        raise Exception('The access to the database you are trying to download is restricted. Please contact the developers to see if it is possible to obtain it.')
+    elif url == '':
+        raise Exception('The database that you are trying to download do not exist. Please try with different parameters.')
     else:
-        zenodo_get.zenodo_get([url])
-        return 1
+        wget.download(url, out='../annotations/db/', bar=bar_progress)
 
     #gdown.download(db_names[db_name], os.path.join(annotations_path, db_name + '.db'), quiet=False)
             #response = requests.get(url, stream=True)

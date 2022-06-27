@@ -1,10 +1,10 @@
 module,lang,url
-Wikipedia,EN,10.5281/zenodo.6759156
-Wikipedia,ES,10.5281/zenodo.6759021
-Wikipedia,DE,10.5281/zenodo.6702689
-Wikipedia,FR,10.5281/zenodo.6759025
-Wikipedia,IT,10.5281/zenodo.6759017
-Wikipedia,NL,10.5281/zenodo.6757537
+Wikipedia,EN,https://zenodo.org/record/6759156/files/Wikipedia-EN.db?download=1
+Wikipedia,ES,https://zenodo.org/record/6759021/files/Wikipedia-ES.db?download=1
+Wikipedia,DE,https://zenodo.org/record/6702689/files/Wikipedia-DE.db?download=1
+Wikipedia,FR,https://zenodo.org/record/6759025/files/Wikipedia-FR.db?download=1
+Wikipedia,IT,https://zenodo.org/record/6759017/files/Wikipedia-IT.db?download=1
+Wikipedia,NL,https://zenodo.org/record/6757537/files/Wikipedia-NL.db?download=1
 Periodicals,EN,-
 Periodicals,ES,-
 Periodicals,DE,-
@@ -18,7 +18,7 @@ Books,FR,-
 Books,IT,-
 Books,NL,-
 Pilots,Bells,-
-Pilots,Child,10.5281/zenodo.6759261
-Pilots,Meetups,10.5281/zenodo.6759272
+Pilots,Child,https://zenodo.org/record/6759261/files/Pilots-Child.db?download=1
+Pilots,Meetups,https://zenodo.org/record/6759272/files/Pilots-Meetups.db?download=1
 Pilots,Musicbo,-
 Pilots,Organs,-
