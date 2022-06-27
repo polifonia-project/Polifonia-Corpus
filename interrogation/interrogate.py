@@ -202,7 +202,9 @@ def select_sents_with_entity(conn, query, sent_n, corpus, lang, save_to_file):
 def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_n, save_to_file):
     db_path = os.path.join(annotations_path, corpus.capitalize() + '_' + lang.upper() + '.db')
     if os.path.exists(db_path) == False:
-        download_annotations(annotations_path, corpus.capitalize() + '_' + lang.upper())
+        d = download_annotations(annotations_path, corpus.capitalize(), lang.upper())
+        if d == 0:
+            raise
     conn = create_connection(db_path)
     if interrogation_type == 'keyword':
         Results = select_sents_with_keyword(conn, query, sent_n, corpus, save_to_file)
@@ -215,7 +217,7 @@ def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_
         print('{} sentences stored'.format(len(Results)))
 
 
-def download_annotations(annotations_path, db_name):
+def download_annotations(annotations_path, module, lang):
     db_names = dict()
     with open(os.path.join(annotations_path, 'urls.csv')) as f:
         for i, line in enumerate(f.readlines()):
@@ -224,7 +226,16 @@ def download_annotations(annotations_path, db_name):
             name, lang, url = line.split(',')
             url=url.strip()
             db_names['_'.join([name, lang])] = url
-            zenodo_get.zenodo_get([url])
+    db_name = db_names.get('_'.join([module, lang]), '')
+    if db_name == '-':
+        print('The access to this database is restricted. Please contact the developers to see if it is possible to obtain it.')
+        return 0
+    elif db_name == '':
+        print('The database that you are trying to download do not exist. Please try with different parameters.')
+        return 0
+    else:
+        zenodo_get.zenodo_get([url])
+        return 1
 
     #gdown.download(db_names[db_name], os.path.join(annotations_path, db_name + '.db'), quiet=False)
             #response = requests.get(url, stream=True)
