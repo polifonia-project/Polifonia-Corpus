@@ -74,14 +74,14 @@ It was created selecting from **[BabelNet domains](http://lcl.uniroma1.it/babeld
 #### Metadata
 The metadata of the module can be downloaded from:
 
-||  lang |  tsv                                                                                                      | xlsx           |    
+|  lang |  url                                                                                                      | xlsx          |    
 |-------|-----------------------------------------------------------------------------------------------------------|---------------|
-| DE    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671494.svg)](https://doi.org/10.5281/zenodo.6671494) 
-| EN    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671510.svg)](https://doi.org/10.5281/zenodo.6671510) 
-| ES    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6670984.svg)](https://doi.org/10.5281/zenodo.6670984) |  | &#9745; |
-| FR    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671560.svg)](https://doi.org/10.5281/zenodo.6671560) 
-| IT    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671571.svg)](https://doi.org/10.5281/zenodo.6671571) 
-| NL    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671519.svg)](https://doi.org/10.5281/zenodo.6671519) 
+| DE    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671494.svg)](https://doi.org/10.5281/zenodo.6671494) |               |
+| EN    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671510.svg)](https://doi.org/10.5281/zenodo.6671510) |               |
+| ES    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6670984.svg)](https://doi.org/10.5281/zenodo.6670984) |               |
+| FR    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671560.svg)](https://doi.org/10.5281/zenodo.6671560) |               |
+| IT    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671571.svg)](https://doi.org/10.5281/zenodo.6671571) |               |
+| NL    | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671519.svg)](https://doi.org/10.5281/zenodo.6671519) |               |    
 | All   |                                                                                                           | **[.xlsx](https://liveunibo.sharepoint.com/:x:/r/sites/polifonia/Shared%20Documents/WP4/Polifonia%20Corpus/Wikipedia%20corpus/metadata/wikipedia_corpus_metadataDE-EN-ES-FR-IT-NL.xlsx?d=wcbd569d8e2c4487c88b3aadc78353be4&csf=1&web=1&e=enjNjj)**|
 
 #### Data
