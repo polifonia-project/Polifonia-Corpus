@@ -127,7 +127,7 @@ The annotation of the module can be downloaded from:
 | NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6757537.svg)](https://doi.org/10.5281/zenodo.6757537)|
 
 ## The Books module
-It was created with the help of musicologists that provided the titles of different influencial music periodicals.
+It was created with the help of musicologists that provided the titles of different influencial music books.
 
 ### Annotations
 
