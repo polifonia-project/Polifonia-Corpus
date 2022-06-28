@@ -131,34 +131,14 @@ It was created with the help of musicologists that provided the titles of differ
 
 ### Annotations
 
-The annotation of the module can be downloaded from:
-
-| lang | url   |
-|------|-------|
-| DE   | ** ** |
-| EN   | ** ** |
-| ES   | ** ** |
-| FR   | ** ** |
-| IT   | ** ** |
-| NL   | ** ** |
+At this stage, the annotations of the Books module are only available to the Polifonia consortium members in accordance with the heterogeneous licensing of the Books sources. Interested parties may contact us, and we will evaluate the sharing of the annotated data.
 
 ## The Periodicals module
 It was created with the help of musicologists that provided the titles of different influencial music periodicals.
 
 ### Annotations
 
-The annotation of the module can be downloaded from:
-
-| lang | url   |
-|------|-------|
-| DE   | ** ** |
-| EN   | [sqlite db](https://drive.google.com/uc?export=download&id=1a2RYX-GdcIwY2XCKsQIYOr9QbSGpoA0x)|
-| ES   | ** ** |
-| FR   | ** ** |
-| IT   | ** ** |
-| NL   | ** ** |
-
-
+At this stage, the annotations of the Periodicals module are only available to the Polifonia consortium members in accordance with the heterogeneous licensing of the Periodicals sources. Interested parties may contact us, and we will evaluate the sharing of the annotated data.
 
 ## The Polifonia Pilots module
 It was created collecting the textual material selected by five **[Polifonia Pilots](https://polifonia-project.eu/pilots/)**:
@@ -171,12 +151,9 @@ It was created collecting the textual material selected by five **[Polifonia Pil
 
 ### Annotations
 
-The annotation of the module can be downloaded from:
+At this stage, the annotations of the Pilots module are only available to the Polifonia consortium members in accordance with the heterogeneous licensing of the Pilots sources. Interested parties may contact us, and we will evaluate the sharing of the annotated data. Texts collected for Child and Meetups Pilots are royalty-free, therefore we release their annotations that can be downloaded from the table below:
 
 | Pilot   | url   |
 |---------|-------|
-| BELLS   | ** ** |
 | CHILD   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759261.svg)](https://doi.org/10.5281/zenodo.6759261) |
 | MEETUPS | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6759272.svg)](https://doi.org/10.5281/zenodo.6759272) |
-| MUSICBO | ** ** |
-| ORGANS  | ** ** |
