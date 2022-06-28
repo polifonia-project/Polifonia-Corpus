@@ -7,7 +7,7 @@ release-date: 06/06/2022
 release-number: v0.0.1
 work-package: 
 - WP4
-licence:
+licence: CC BY
 links:
 - https://github.com/polifonia-project/Polifonia-Corpus
 credits:
