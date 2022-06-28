@@ -202,13 +202,12 @@ The metadata of the module can be downloaded from:
 
 #### Data
 
-The data of some pilot can not be downloaded due to copyright issues. The available data can be found below:
+The data of the Pilots Module of the Polifonia textual Corpus collected for Bells, MusicBo and Organs pilots cannot be published in their integral form because they are subject to heterogeneous license restrictions. The respective set of published metadata (see table above) allows for the reproduction of the whole corpora. Texts collected for Child and Meetups Pilots are royalty-free, therefore we report links to retrieve them from their corresponding GitHub repositories:
 
 | Pilot   | url     |
 |---------|---------|
-| CHILD   | http:// |
-| MEETUPS | http:// |
-| ORGANS  | http:// |
+| CHILD   | https://github.com/polifonia-project/documentary-evidence-benchmark/tree/main/corpus |
+| MEETUPS | https://github.com/polifonia-project/meetups_pilot/tree/main/cleanText |
 
 However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
 Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
