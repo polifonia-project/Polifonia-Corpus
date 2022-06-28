@@ -152,12 +152,12 @@ The metadata of the module can be downloaded from:
 
 | lang | url                                                                                                                                                                                                  | 
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DE   | -                                                                                                                                                                                                    |
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761779.svg)](https://doi.org/10.5281/zenodo.6761779)|
 | EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671912.svg)](https://doi.org/10.5281/zenodo.6671912)|
-| ES   | -                                                                                                                                                                                                    |
-| FR   | -                                                                                                                                                                                                    |
-| IT   | -                                                                                                                                                                                                    |
-| NL   | -                                                                                                                                                                                                    |
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761787.svg)](https://doi.org/10.5281/zenodo.6761787)|
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761794.svg)](https://doi.org/10.5281/zenodo.6761794)|
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761806.svg)](https://doi.org/10.5281/zenodo.6761806)|
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6761809.svg)](https://doi.org/10.5281/zenodo.6761809)|
 
 #### Data
 
@@ -179,6 +179,8 @@ Some statistics of the module are provided below:
 | FR | 349        | 329.166    | 696.427   | 5.111.915  | 
 | IT | 1.251      | 433.465    | 992.902   | 7.879.459  | 
 | NL | 125        | 187.350    | 716.506   | 3.880.499  | 
+
+
 ### The Polifonia Pilots module
 It was created collecting the textual material selected by five **[Polifonia Pilots](https://polifonia-project.eu/pilots/)**:
 - BELLS
