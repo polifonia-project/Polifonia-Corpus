@@ -3,8 +3,8 @@ component-id: Polifonia-Corpus
 name: Polifonia Corpus
 description: Data, metadata, statistics, annotations and interrogation APIs of the Polifonia Textual Corpus.
 type: Repository
-release-date: 06/06/2022
-release-number: v0.0.1
+release-date: 28/06/2022
+release-number: v0.1.3
 work-package: 
 - WP4
 licence: CC BY
