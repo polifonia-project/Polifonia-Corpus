@@ -116,12 +116,12 @@ The metadata of the module can be downloaded from:
 
 | lang | url                                                                                                      |
 |------|-----------------------------------------------------------------------------------------------------------|
-| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671771.svg)](https://doi.org/10.5281/zenodo.6671771) |
-| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671756.svg)](https://doi.org/10.5281/zenodo.6671756) |
-| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671765.svg)](https://doi.org/10.5281/zenodo.6671765) |
-| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671830.svg)](https://doi.org/10.5281/zenodo.6671830) |
-| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671795.svg)](https://doi.org/10.5281/zenodo.6671795) |
-| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6671868.svg)](https://doi.org/10.5281/zenodo.6671868) | 
+| DE   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6772115.svg)](https://doi.org/10.5281/zenodo.6772115) |
+| EN   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6772136.svg)](https://doi.org/10.5281/zenodo.6772136) |
+| ES   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6772131.svg)](https://doi.org/10.5281/zenodo.6772131) |
+| FR   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6772142.svg)](https://doi.org/10.5281/zenodo.6772142) |
+| IT   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6772137.svg)](https://doi.org/10.5281/zenodo.6772137) |
+| NL   | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6772145.svg)](https://doi.org/10.5281/zenodo.6772145) | 
 
 #### Data
 
