@@ -125,7 +125,7 @@ The metadata of the module can be downloaded from:
 
 #### Data
 
-The data of the module can not be downloaded due to copyright issue.
+The data of the module cannot be downloaded due to copyright issue.
 However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
 Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
 
@@ -160,7 +160,7 @@ The metadata of the module can be downloaded from:
 
 #### Data
 
-The data of the module can not be downloaded due to copyright issue.
+The data of the module cannot be downloaded due to copyright issue.
 However, it is possible to reconstruct the corpus using the metadata provided in the previous section.
 Furthermore, the data processed and annotated can be accessed interrogating the corpus (how to interrogate the corpus is explained in a README.md file inside the interrogation folder of this repository).
 
