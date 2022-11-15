@@ -49,11 +49,30 @@ def print_sents_concepts(results, query):
             annotation_ = list(annotation.values())
             #idx = int(key_concept[0][0].split('_')[1])
             idx = [i for i, (k, v) in enumerate(annotation.items()) if k == key_concept[0][0]][0]
-            print(res[0].ljust(30), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx-8,idx)]).rjust(60), annotation_[idx]['form'].center(10), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx+1,idx+9)]).ljust(60))
+            print(res[0].ljust(30), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx-14,idx)]).rjust(60), annotation_[idx]['form'].center(10), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx+1,idx+15)]).ljust(60))
             Results.append(res)
         except:
             continue
     return Results
+
+def print_sents_lemma(results, query):
+    #cols = [column[0] for column in results.description]
+    #results = pd.DataFrame.from_records(data=results.fetchall(), columns=cols)
+    Results = []
+    for result in results:
+        res = [result[0], result[1], result[2].split('\n')[2]]
+        annotation = annotation2dict(result[3].split('\n'))
+        key_concept = [(k, t) for k, t in annotation.items() if t['lemma'] == query]
+        try:
+            annotation_ = list(annotation.values())
+            #idx = int(key_concept[0][0].split('_')[1])
+            idx = [i for i, (k, v) in enumerate(annotation.items()) if k == key_concept[0][0]][0]
+            print(res[0].ljust(30), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx-14,idx)]).rjust(60), annotation_[idx]['form'].center(10), ' '.join([annotation_[idx_]['form'] for idx_ in range(idx+1,idx+15)]).ljust(60))
+            Results.append(res)
+        except:
+            continue
+    return Results
+
 
 def print_sents_entities(results, query):
     #cols = [column[0] for column in results.description]
@@ -101,25 +120,42 @@ def select_sents_with_keyword(conn, query, sent_n):
     offset = 0
     more = ''
     Results = []
+    count = c.execute(
+            """SELECT count(doc_id), sent_id, sent_text, sent_annotation, INSTR(sent_text, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
+            (' ' + query + ' ', 10000000, offset))
+    count = count.fetchone()[0]
     while more != 'no':
+        c = conn.cursor()
         #results = c.execute("""SELECT doc_id, sent_id, sent_text, sent_annotation FROM sents WHERE sent_text LIKE ? LIMIT ? OFFSET ? """, ('% '+query+' %', sent_n, offset))
+
         results = c.execute(
             """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_text, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
             (' ' + query + ' ', sent_n, offset))
         Results+=print_sents(results, query)
         more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
         offset+=sent_n
-    return Results
+    return [count, Results]
+
+def get_offset(concept):
+    s = str(concept.offset())
+    while len(s) < 8:
+        s = '0' + s
+    return 'wn:' + s + concept.pos()
 
 
 def get_concept(query, concepts):
+    lexicon = get_lexicon()
     if len(concepts) == 0:
         print('Your query does not have concepts connected with it. Please try with another one or use the "keyword" search.')
     elif len(concepts) > 1:
         print('The word {} is associated with {} concepts'.format(query, len(concepts)))
         print('Please select one concept from the list below indicating its number:')
         for i, concept in enumerate(concepts):
-            print('{}. {} - {}'.format(i, concept.pos(), concept.definition()))
+            offset = get_offset(concept)
+            if offset in lexicon:
+                print('{}*. {} - {}'.format(i, concept.pos(), concept.definition()))
+            else:
+                print('{}. {} - {}'.format(i, concept.pos(), concept.definition()))
         index = input()
         concept = concepts[int(index)]
     else:
@@ -137,14 +173,41 @@ def select_sents_with_concept(conn, query, sent_n):
     offset = 0
     more = ''
     Results = []
+    count = c.execute("""SELECT count(doc_id), sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """, (wn_key, 10000000, offset))
+    count = count.fetchone()[0]
+    c = conn.cursor()
     while more != 'no':
-        results = c.execute(
-        """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
-        (wn_key, sent_n, offset))
+        results = c.execute("""SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """, (wn_key, sent_n, offset))
         Results+=print_sents_concepts(results, wn_key)
         more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
         offset+=sent_n
-    return Results
+    return [count, Results]
+
+def select_sents_with_lemma(conn, query, sent_n):
+    c = conn.cursor()
+    offset = 0
+    more = ''
+    Results = []
+    count = c.execute(
+        """SELECT count(doc_id), sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
+        (query, 10000000, offset))
+    count = count.fetchone()[0]
+    c = conn.cursor()
+    while more != 'no':
+        results = c.execute(
+        """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
+        (query, sent_n, offset))
+        Results+=print_sents_lemma(results, query)
+
+        more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
+        offset+=sent_n
+    return [count, Results]
+
+def get_lexicon():
+    with open('data/Polifonia_lexicon_v21.tsv') as f:
+        reader = csv.reader(f, delimiter='\t')
+        lexicon = {row[0] : [row[0]] + row[2:] for row in reader}
+    return lexicon
 
 def get_entities(query, lang):
     with open('data/lex_ent_map.pkl', 'rb') as f:
@@ -182,6 +245,10 @@ def select_sents_with_entity(conn, query, sent_n, lang):
     offset = 0
     more = ''
     Results = []
+    count = c.execute(
+        """SELECT count(doc_id), sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
+        (wkp_title, 10000000, offset))
+    count = count.fetchone()[0]
     while more != 'no':
         results = c.execute(
         """SELECT doc_id, sent_id, sent_text, sent_annotation, INSTR(sent_annotation, ?) instr_ FROM sents WHERE instr_ > 0 LIMIT ? OFFSET ? """,
@@ -189,7 +256,8 @@ def select_sents_with_entity(conn, query, sent_n, lang):
         Results+=print_sents_entities(results, wkp_title)
         more = input('Press "enter" for more sentences (type "no" and press "enter" to stop)')
         offset+=sent_n
-    return Results
+    return count, Results
+
 
 
 def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_n, save_to_file):
@@ -200,11 +268,13 @@ def interrogate(annotations_path, corpus, lang, interrogation_type, query, sent_
         download_annotations(annotations_path, corpus.capitalize(), lang.upper())
     conn = create_connection(db_path)
     if interrogation_type == 'keyword':
-        Results = select_sents_with_keyword(conn, query, sent_n)
+        count, Results = select_sents_with_keyword(conn, query, sent_n)
     elif interrogation_type == 'concept':
-        Results = select_sents_with_concept(conn, query, sent_n)
+        count, Results = select_sents_with_concept(conn, query, sent_n)
+    elif interrogation_type == 'lemma':
+        count, Results = select_sents_with_lemma(conn, query, sent_n)
     elif interrogation_type == 'entity':
-        Results = select_sents_with_entity(conn, query, sent_n, lang)
+        count, Results = select_sents_with_entity(conn, query, sent_n, lang)
     if save_to_file == 'Yes':
         save_results(Results, query, 'keyword', corpus)
         print('{} sentences stored'.format(len(Results)))
@@ -252,7 +322,7 @@ def parse_args():
                         help="It can be Wikipedia, Books, Periodicals or Pilots")
     parser.add_argument('--lang', type=str, default='EN', help="It can be DE, EN, ES, FR, IT or NL")
     parser.add_argument('--interrogation_type', type=str, default='entity',
-                        help="It can be keyword, concept or entity")
+                        help="It can be keyword, concept, lemma or entity")
     parser.add_argument('--query', type=str, default='wagner')
     parser.add_argument('--sent_n', type=int, default=50)
     parser.add_argument('--save_to_file', type=str, default='No')
